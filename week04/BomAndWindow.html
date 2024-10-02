@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BOM과 Window 실습</title>
+    <style>
+        /* 버튼 스타일 */
+        .myButton {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+        /* 버튼 호버 스타일 */
+        .myButton:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <!-- To do: 클릭 이벤트 핸들러 추가 -->
+            <button class="myButton" onclick="scrollDown(100)">스크롤 내리기</button>
+            <button class="myButton" onclick="resizeBy(10,10)">확대</button>
+            <button class="myButton" onclick="resizeBy(-10,-10)">축소</button>
+        </div>
+        <div>
+            <hr>
+            <h3>실습 내용</h3>
+            스크롤 내리기 버튼: 클릭 시 0.1초당 10px씩 스크롤이 내려가도록 하는 기능<br>
+            확대 버튼: 클릭 시 브라우저의 하단을 10px 확대<br><br>
+            축소 버튼: 클릭 시 브라우저의 우측을 10px 축소<br>
+            주어진 이미지에 마우스를 2초간 올릴 시 창이 닫히는 기능<br><br>
+        </div>
+        <div>
+            <hr>
+            <h3>실습 내용</h3>
+            스크롤 내리기 버튼: 클릭 시 0.1초당 10px씩 스크롤이 내려가도록 하는 기능<br>
+            확대 버튼: 클릭 시 브라우저의 하단을 10px 확대<br><br>
+            축소 버튼: 클릭 시 브라우저의 우측을 10px 축소<br>
+            주어진 이미지에 마우스를 2초간 올릴 시 창이 닫히는 기능<br><br>
+        </div>
+        <div>
+            <hr>
+            <h3>실습 내용</h3>
+            스크롤 내리기 버튼: 클릭 시 0.1초당 10px씩 스크롤이 내려가도록 하는 기능<br>
+            확대 버튼: 클릭 시 브라우저의 하단을 10px 확대<br><br>
+            축소 버튼: 클릭 시 브라우저의 우측을 10px 축소<br>
+            주어진 이미지에 마우스를 2초간 올릴 시 창이 닫히는 기능<br><br>
+        </div>
+        <div>
+            <hr>
+            <h3>실습 내용</h3>
+            스크롤 내리기 버튼: 클릭 시 0.1초당 10px씩 스크롤이 내려가도록 하는 기능<br>
+            확대 버튼: 클릭 시 브라우저의 하단을 10px 확대<br><br>
+            축소 버튼: 클릭 시 브라우저의 우측을 10px 축소<br>
+            주어진 이미지에 마우스를 2초간 올릴 시 창이 닫히는 기능<br><br>
+        </div>
+        <div>
+            <hr>
+            <h3>실습 내용</h3>
+            스크롤 내리기 버튼: 클릭 시 0.1초당 10px씩 스크롤이 내려가도록 하는 기능<br>
+            확대 버튼: 클릭 시 브라우저의 하단을 10px 확대<br><br>
+            축소 버튼: 클릭 시 브라우저의 우측을 10px 축소<br>
+            주어진 이미지에 마우스를 2초간 올릴 시 창이 닫히는 기능<br><br>
+        </div>
+        <div>
+            <hr>
+            <h3>실습 내용</h3>
+            스크롤 내리기 버튼: 클릭 시 0.1초당 10px씩 스크롤이 내려가도록 하는 기능<br>
+            확대 버튼: 클릭 시 브라우저의 하단을 10px 확대<br><br>
+            축소 버튼: 클릭 시 브라우저의 우측을 10px 축소<br>
+            주어진 이미지에 마우스를 2초간 올릴 시 창이 닫히는 기능<br><br>
+        </div>
+        <div>
+            <hr>
+            <h3>실습 내용</h3>
+            스크롤 내리기 버튼: 클릭 시 0.1초당 10px씩 스크롤이 내려가도록 하는 기능<br>
+            확대 버튼: 클릭 시 브라우저의 하단을 10px 확대<br><br>
+            축소 버튼: 클릭 시 브라우저의 우측을 10px 축소<br>
+            주어진 이미지에 마우스를 2초간 올릴 시 창이 닫히는 기능<br><br>
+        </div>
+        <div>
+            <hr>
+            <h3>실습 내용</h3>
+            스크롤 내리기 버튼: 클릭 시 0.1초당 10px씩 스크롤이 내려가도록 하는 기능<br>
+            확대 버튼: 클릭 시 브라우저의 하단을 10px 확대<br><br>
+            축소 버튼: 클릭 시 브라우저의 우측을 10px 축소<br>
+            주어진 이미지에 마우스를 2초간 올릴 시 창이 닫히는 기능<br><br>
+        </div>
+        <div>
+            <hr>
+            <h3>실습 내용</h3>
+            스크롤 내리기 버튼: 클릭 시 0.1초당 10px씩 스크롤이 내려가도록 하는 기능<br>
+            확대 버튼: 클릭 시 브라우저의 하단을 10px 확대<br><br>
+            축소 버튼: 클릭 시 브라우저의 우측을 10px 축소<br>
+            주어진 이미지에 마우스를 2초간 올릴 시 창이 닫히는 기능<br><br>
+        </div>
+        <!-- 이미지 추가 --><!--5000은 5초-->
+         <img src="De sterrennacht.jpg" id = "img"
+            onmouseover="startTimer(2000)"
+            onmouseout="cancelTimer()">
+    </div>
+
+    <script>
+        let timer = null;
+        let win = null; n 
+        /* 스크롤 내리기, 윈도우 크기 조절 기능, 창 닫기 타이머 구현 */
+        function startTimer(time){
+            timer = setTimeout("window.close()",time);
+        }
+        function cancelTimer(){
+            if(timer != null){
+                clearTimeout(timer);
+            };
+        }
+        function scrollDown(time){
+            setInterval("window.scrollBy(0,10)",time);
+        }
+        function resizeBy(x,y){
+            if (win == null || win.closed) {
+                win = window.open("", "newWin", "width=300,height=300");
+            }
+            win.resizeBy(x, y);
+        }
+        
+    </script>
+</body>
+</html>
+</body>
+</html>
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>02-2 JavaScript 더하기 실습</title>
+</head>
+<body>
+
+<h1>숫자 두 개 더하기</h1>
+<label for="num1">숫자 1:</label>
+<!-- 여기에 필요한 코드 작성(1줄) -->
+<input type="text" id="t1">
+<br><br>
+
+<label for="num2">숫자 2:</label>
+<!-- 여기에 필요한 코드 작성(1줄) -->
+<input type="text" id="t2">
+<br><br>
+
+<!-- 여기에 필요한 코드 작성(1줄) -->
+<button id="addButton" type="button">더하기</button>
+
+<script>
+    document.getElementById("addButton").addEventListener("click", function() {
+        // 여기에 입력한 두 숫자를 더한 값을 alert로 출력하는 코드를 작성
+        const t1 = Number(document.getElementById("t1").value);
+        const t2 = Number(document.getElementById("t2").value);
+        alert("결과: "+(t1+t2));
+    });
+</script>
+
+</body>
+</html>

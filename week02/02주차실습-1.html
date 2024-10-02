@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>02-1 HTML과 CSS 실습</title>
+    <style>
+        table {
+            width: 50%; /* 표 너비를 50%로 설정 */
+            border-collapse: collapse; /* 테두리를 하나로 합침 */
+            border: 2px solid black; /* 테두리를 2px, 실선, black으로 설정 */
+        }
+        
+        th, td {
+            border: 2px solid black; /* 테두리를 2px, 실선, black으로 설정 */
+            padding: 10px;
+            text-align: center; /* 텍스트를 가운데 정렬 */
+            background-color: lightyellow; /* 셀의 배경색을 lightyellow로 설정 */
+        }
+        
+        th {
+            background-color: #a0a0a0; /* 헤더 셀의 배경색을 #a0a0a0으로 설정 */
+            color: #f0f0f0; /* 헤더의 텍스트 색상을 #f0f0f0으로 설정 */
+        }
+        
+        /* 웹사이트명을 굵게 표시 */
+        .bold-text {
+            font-weight: bold;
+        }
+
+        /* 설명 텍스트의 색상을 blue로 설정 */
+        .description {
+            color: blue;
+        }
+
+        a {
+            text-decoration: none; /* 하이퍼링크 밑줄 제거 */
+            color: green; /* 하이퍼링크 색상을 green으로 설정 */
+        }
+
+        /* 하이퍼링크에 마우스를 올렸을 때 색상을 red로 변경 */
+        a:hover {
+            color: red;
+        }
+        
+        .title {
+            background-color: gold; /* 웹사이트 목록 제목의 배경색을 gold로 설정 */
+            display: inline-block; /* 배경 영역을 inline block으로 한정 */
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1 class="title">웹사이트 목록</h1>
+
+<hr>
+
+<table>
+    <tr>
+        <th>웹사이트</th>
+        <th>설명</th>
+        <th>링크</th>
+    </tr>
+    <tr>
+        <td class="bold-text">구글</td>
+        <td class="description">구글 검색 엔진</td>
+        <td><a href="https://www.google.com/" target="_blank">방문하기</a></td> <!-- 새 창에서 링크를 열도록 하기 -->
+    </tr>
+    <!-- 여기에 행 추가 -->
+    <tr>
+        <td class="bold-text">네이버</td>
+        <td class="description">한국의 검색 엔진</td>
+        <td><a href="https://www.naver.com/" target="_blank">방문하기</a></td> <!-- 새 창에서 링크를 열도록 하기 -->
+    </tr>
+    <tr>
+        <td class="bold-text">정보컴퓨터공학부</td>
+        <td class="description">부산대학교 정보컴퓨터공학부</td>
+        <td><a href="https://cse.pusan.ac.kr/" target="_blank">방문하기</a></td> <!-- 새 창에서 링크를 열도록 하기 -->
+    </tr>
+</table>
+
+</body>
+</html>

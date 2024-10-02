@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>02-3 JavaScript, DOM 실습</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #controlPanel {
+            margin-bottom: 20px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        ul {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>JavaScript, DOM 실습</h1>
+
+<div id="controlPanel">
+    <button id="changeColorButton">배경색 변경</button>
+    <button id="addItemButton">목록에 항목 추가</button>
+</div>
+
+<hr>
+
+<h2>동적 목록</h2>
+<ul id="myList">
+    <li>기본 항목 1</li>
+    <li>기본 항목 2</li>
+</ul>
+
+<script>
+    // 1. '배경색 변경' 버튼을 누르면 배경색을 변경하는 기능을 구현
+    document.getElementById("changeColorButton").addEventListener("click", function() {
+        // body의 배경색을 변경하는 코드를 작성
+        document.body.style.backgroundColor = "grey";
+        
+    });
+
+    let num = 1;
+
+    // 2. '목록에 항목 추가' 버튼을 누르면 동적 목록에 새로운 항목을 추가하는 기능을 구현
+    document.getElementById("addItemButton").addEventListener("click", function() {
+        document.getElementById("myList").innerHTML += "<li>새 항목 " + num + "</li>"; // 새로운 <li> 요소를 생성
+        // newItem의 텍스트를 설정하기. 매 클릭시마다 번호(itemNum)가 증가되어야 한다.
+        // 동적 목록에 새 항목을 추가하기
+        num++;
+    });
+</script>
+
+</body>
+</html>
