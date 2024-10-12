@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function createDiv(){
+                let obj = document.getElementById("parent");
+                let newDiv = document.createElement("div");
+                newDiv.innerHTML = "새로생성된 div";
+                newDiv.setAttribute("id","mydiv");
+                newDiv.onclick = function(){
+                    let p = this.parentElement;
+                    p.removeChild(this);
+                };
+                obj.appendChild(newDiv);
+            }
+        </script>
+    </head>
+    <body id="parent">
+        <a href="javascript:createDiv()">div 생성</a>
+
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            let newWin = null;
+            function load(URL){
+                newWin = window.open(URL,"myWin","left=300");
+            }
+            function closeNewWindow(){
+                if(newWin == null || newWin.closed) return;
+                else newWin.close();    //열어놓은 윈도우닫기
+            }
+        </script>
+    </head>
+    <body>
+        <a href="javascript:load('http://www.disneyworld.com')">새 윈도우 열기</a>
+        <a href="javascript:window.close()">현재 윈도우 닫기</a>
+        <a href="javascript:closeNewWindow()">새 윈도우 닫기</a>
+    </body>
+</html>
