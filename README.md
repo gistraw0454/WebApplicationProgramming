@@ -41,7 +41,7 @@
 |`document.writeln()`|`\n`와 함께 출력|`document.writeln("<h3>hi</h3>")`|
 |`documant.getElementById("demo").innerHTML`|특정 요소에 출력||
 |`prompt("메세지","입력창 디폴트 입력값")`|사용자로부터 **문자열**을 입력받아 리턴하는 다이얼로그 표시|![alt text](image-2.png)|
-|`confirm("메세지")|메세지를 출력하고 확인/취소 버튼을 가진 다이얼로그 표시|![alt text](image-3.png)|
+|`confirm("메세지")`|메세지를 출력하고 확인/취소 버튼을 가진 다이얼로그 표시|![alt text](image-3.png)|
 |`alert("메세지")`|메시지와 확인버튼을 가진 다이얼로그 표시|![alt text](image-4.png)|
 
 ## Data Types and Variables
