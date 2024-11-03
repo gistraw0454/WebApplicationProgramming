@@ -52,13 +52,26 @@ function saveUserData(users) {
 }
 
 async function addUser(user) {
-  const users = await readUserData();
-  const isDuplicate = users.some(u => u.name === user.name || u.email === user.email);
-  if (isDuplicate) {
-    throw new Error(`이름 : ${user.name} 또는 이메일 : ${user.email} 이 중복됩니다.`);
-  }
-  users.push(user);
-  await saveUserData(users);
+  return readUserData()
+      .then((users)=>{
+        const isDuplicate = users.some(u => u.name === user.name || u.email === user.email);
+        if (isDuplicate) {
+          throw new Error(`이름 : ${user.name} 또는 이메일 : ${user.email} 이 중복됩니다.`);
+        }
+        users.push(user);
+        return saveUserData(users);
+      })
+      .then(()=> {return delay(2000);})
+      .then(()=>{
+        console.log('새 사용자가 추가되었습니다.');
+      })
+      .catch((err)=>{
+        // console.error(err.message);
+        console.error(err);
+        rl.close();
+        process.exit(1);
+      })
+
 }
 
 async function listUsers() {
@@ -99,11 +112,9 @@ async function main() {
       await delay(1000); // 1초 딜레이
       try {
         await addUser({name, email});
-        console.log('새 사용자가 추가되었습니다.');
       } catch (err) {
         console.error(err.message);
         rl.close();
-        break;
       }
     } else {
       console.log('잘못된 선택입니다. 다시 선택해주세요.');
