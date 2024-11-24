@@ -1,0 +1,23 @@
+<!-- layout을 불러옴 -->
+{% extends "layout.njk" %}
+
+<!-- title을 '문의 성공'으로 변경 -->
+{% block title %}
+문의 성공
+{% endblock %}
+
+<!-- content 블록 -->
+{% block content %}
+<h1>문의가 접수되었습니다</h1>
+<p>귀하의 문의가 성공적으로 접수되었습니다. 감사합니다!</p>
+<!-- content 블록 끝 -->
+{% endblock %}
+
+<!-- scripts 블록 -->
+{% block scripts %}
+    <!-- 콘솔에 '문의 성공 페이지가 로드되었습니다.'를 출력 -->
+<script>
+    console.log('문의 성공 페이지가 로드되었습니다.');
+</script>
+<!-- scripts 블록 끝 -->
+{% endblock %}

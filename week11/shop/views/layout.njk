@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <!-- title 블록을 생성하고, layout의 title을 '상품 목록'으로 설정 -->
+        {% block title %}
+        상품 목록
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">홈</a> |
+            <a href="/products">상품</a> |
+            <a href="/contact">문의</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- content라는 이름의 block 생성 -->
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 상품 목록 웹사이트</p>
+    </footer>
+
+    <!-- scripts라는 이름의 block 생성 -->
+    {% block scripts %}
+    {% endblock %}
+</body>
+</html>

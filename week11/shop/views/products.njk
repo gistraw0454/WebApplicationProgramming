@@ -1,0 +1,38 @@
+<!-- layout을 불러옴 -->
+{% extends "layout.njk" %}
+
+<!-- title을 '상품 페이지'로 변경 -->
+{% block title %}
+상품 페이지
+{% endblock %}
+
+<!-- content 블록 -->
+{% block content %}
+    <h1>상품 상세 정보</h1>
+    <ul>
+        <!-- app.js로부터 받아온 products의 모든 상품에 대해 반복 -->
+        {% for item in products %}
+            <li>
+                <!-- '상품명 - 상품가격 원'으로 리스트 원소 생성 -->
+                {{item.name}} - {{item.price}}원
+                <!-- 상품 가격이 20000원 이상이라면 -->
+                {% if item.price >= 20000 %}
+                    <!-- '고가 상품'이라는 태그를 추가로 표시(styles.css의 .badge class 참고) -->
+                    <span class="badge">고가 상품</span>
+                <!-- 조건문 끝 -->
+                {% endif %}
+            </li>
+        <!-- 반복문 끝 -->
+        {% endfor %}
+    </ul>
+<!-- content 블록 끝 -->
+{% endblock %}
+
+<!-- scripts 블록 -->
+{% block scripts %}
+    <!-- 콘솔에 '상품 페이지가 로드되었습니다.'를 출력 -->
+    <script>
+        console.log('상품 페이지가 로드되었습니다.');
+    </script>
+<!-- scripts 블록 끝 -->
+{% endblock %}

@@ -1,0 +1,44 @@
+/* public/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    padding: 10px;
+}
+
+header nav a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.badge {
+    background-color: #ff5733;
+    color: white;
+    padding: 3px 7px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    margin-left: 10px;
+}

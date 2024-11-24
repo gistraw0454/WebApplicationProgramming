@@ -1,0 +1,33 @@
+<!-- layout을 불러옴 -->
+{% extends "layout.njk" %}
+
+<!-- title을 '문의 페이지'로 변경 -->
+{% block title %}
+문의 페이지
+{% endblock %}
+
+<!-- content 블록 -->
+{% block content %}
+    <h1>문의하기</h1>
+    <!-- /contact에 POST를 하는 form 생성 -->
+        <!-- 내용은 과제 PDF 참조 -->
+    <form action='/contact' method="POST">
+        <label for="name">이름:</label>
+        <input type="text" id="name" name="name" required>
+        </br></br>
+        <label for="message">메세지:</label>
+        <textarea id="message" name="message" required></textarea>
+        </br></br>
+        <button type="submit">보내기</button>
+    </form>
+<!-- content 블록 끝 -->
+{% endblock %}
+
+<!-- scripts 블록 -->
+{% block scripts %}
+    <!-- 콘솔에 '문의 페이지가 로드되었습니다.'를 출력 -->
+    <script>
+        console.log("문의 페이지가 로드되었습니다.")
+    </script>
+<!-- scripts 블록 끝 -->
+{% endblock %}

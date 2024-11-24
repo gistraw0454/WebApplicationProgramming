@@ -1,0 +1,42 @@
+<!-- layout을 불러옴 -->
+{% extends "layout.njk" %}
+
+<!-- title을 '홈 - 상품 목록'으로 변경 -->
+{% block title %}
+홈 - 상품 목록
+{% endblock %}
+
+<!-- content 블록 -->
+{% block content %}
+    <h1>홈 페이지</h1>
+    <h2>상품 목록</h2>
+    <ul>
+        <!-- app.js로부터 받아온 products의 모든 상품에 대해 반복 -->
+        {% for item in products %}
+            <li>
+                <!-- 상품이 세일 중이라면 -->
+                {% if item.onSale %}
+                    <!-- '상품명 - 상품가격 원 (할인 중!)'으로 리스트 원소 생성 -->
+                    <!-- 이때 상품명은 굵은 글씨체로 설정 -->
+                    <strong>{{item.name}}</strong> - {{item.price}}원 (할인 중!)
+                <!-- 아니라면 -->
+                {% else %}
+                    <!-- '상품명 - 상품가격 원'으로 리스트 원소 생성 -->
+                    {{item.name}} - {{item.price}}원
+                <!-- 조건문 끝 -->
+                {% endif %}
+            </li>
+        <!-- 반복문 끝 -->
+        {% endfor %}
+    </ul>
+<!-- content 블록 끝 -->
+{% endblock %}
+
+<!-- scripts 블록 -->
+{% block scripts %}
+    <!-- 콘솔에 '홈 페이지가 로드되었습니다.'를 출력 -->
+    <script>
+        console.log("홈 페이지가 로드되었습니다.")
+    </script>
+<!-- scripts 블록 끝 -->
+{% endblock %}

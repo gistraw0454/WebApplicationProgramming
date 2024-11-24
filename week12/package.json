@@ -1,0 +1,21 @@
+{
+  "name": "my-web",
+  "version": "1.0.0",
+  "description": "app.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "author": "이유진",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.11.4",
+    "nunjucks": "^3.2.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
